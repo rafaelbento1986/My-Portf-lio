@@ -45,7 +45,6 @@ nav {
     letter-spacing: 0.063em;
 }
 
-
 ul,
 a {
     display: flex;
@@ -137,7 +136,7 @@ h2 {
 }
 
 .my-name {
-    grid-column: 1 / 4;  
+    grid-column: 1 / 4;
     font-size: 35px;
     font-weight: 600;
     align-items: end;
@@ -157,15 +156,8 @@ h2 {
     background-image: linear-gradient(to right, #dbe8ee, #55a8e9, #75afdd, #ffffff, #ffffff);
     background-clip: text;
     color: transparent;
-    
-}
 
-/* .my-subscript {
-    grid-column: 1 / 6;
-    font-size: 30px;
-    font-weight: 700;
-    align-items: end;
-} */
+}
 
 .minhafoto {
     height: 350px;
@@ -185,6 +177,7 @@ h2 {
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-15px);
     }
