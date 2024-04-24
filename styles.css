@@ -86,6 +86,26 @@ ul .nav-names {
     padding-right: 30px;
 }
 
+/* Gradiente Sublinhado Animado */
+
+.nav-names a {
+    background-image: linear-gradient(red, blue);
+    background-repeat: no-repeat;
+    background-size: 0% 3px;
+    background-position: left bottom;
+    padding-bottom: 4px;
+    transition: background-size 300ms ease;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.nav-names a:hover {
+    background-size: 100% 3px;
+}
+
+/* Final Gradiente Sublinhado Animado */
+
 ul .icons {
     display: flex;
     gap: 10px;
