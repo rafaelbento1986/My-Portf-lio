@@ -5,6 +5,7 @@
     --color1: #FFF;
     --color2-icons: #22a0f5;
     --color3-gradiente: linear-gradient(to bottom, #193867, #215789, #2a79ab, #379ccb, #4ac0e9);
+    --color4-gradiente: linear-gradient(to bottom, #4ac0e9, #379ccb, #2a79ab, #215789, #193867);
 }
 
 * {
@@ -21,20 +22,14 @@ body {
     height: 100%;
     transition: 0.3s;
     /* Background Gradient */
-    background-image: linear-gradient(to bottom, #193867, #215789, #2a79ab, #379ccb, #4ac0e9);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+    background-image: var(--color3-gradiente)
 }
 
 /* HEADER */
 header {
     padding: 30px;
     /* background-color: #898999; */
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -71,6 +66,7 @@ a {
     font-size: 22px;
     font-style: italic;
     font-weight: 900;
+    color: var(--color1);
     text-shadow: 2px 3px 0px var(--color2-icons);
 }
 
@@ -87,14 +83,13 @@ ul .nav-names {
 }
 
 /* Gradiente Sublinhado Animado */
-
 .nav-names a {
-    background-image: linear-gradient(red, blue);
+    background-image: linear-gradient(#22a0f5, rgb(255, 255, 255));
     background-repeat: no-repeat;
     background-size: 0% 3px;
     background-position: left bottom;
     padding-bottom: 4px;
-    transition: background-size 300ms ease;
+    transition: background-size 200ms ease;
     cursor: pointer;
     text-decoration: none;
     font-weight: 900;
@@ -122,7 +117,7 @@ main {
     display: flex;
     justify-content: center;
     /* padding: 90px; */
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 .container-main-grid>* {
@@ -146,7 +141,7 @@ main {
     padding: 20px;
 }
 
-h2 {
+.container-main-grid h2 {
     font-size: 45px;
     font-style: italic;
     font-weight: 900;
@@ -201,4 +196,105 @@ h2 {
     50% {
         transform: translateY(-15px);
     }
+}
+
+/* Section Anim. */
+
+.container-card {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    gap: 40px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    height: 215px;
+    position: relative;
+    /* background-color: #FFF; */
+    background-image: var(--color4-gradiente);
+    border-radius: 20px;
+    box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+
+.card:hover {
+    height: 420px;
+}
+
+.card .img-box {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    top: 10px;
+}
+
+.card:hover .img-box {
+    top: -60px;
+    scale: 0.75;
+    transition: 0.5s;
+}
+
+.card .img-box img {
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 170px;
+    width: 100%;
+    padding: 0px 30px;
+    text-align: center;
+    height: 30px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card .content h2,
+p {
+    color: #ffffff;
+}
+
+.card:hover .content {
+    top: 80px;
+    height: auto;
+}
+
+.card .read-more {
+    background: var(--color2-icons);
+    padding: 12px;
+    color: #FFF;
+    border-radius: 8PX;
+    margin: 0 auto;
+}
+
+/* FOOTER */
+.container-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.icons-footer {
+    display: flex;
+    gap: 28px;
+}
+
+.icons-footer .bi-github,
+.icons-footer .bi-whatsapp,
+.icons-footer .bi-linkedin {
+    fill: #FFF;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    padding: 14px;
 }
